@@ -86,8 +86,8 @@ Output files are in the compressed h5 format with the shape (no.frames,angle) or
 
 **01_EvaluateFoldingRatio**
 
-/00_all_dipeptides/FoldingPreference.py<br>
-/01_concentration_series/F3-P1_AutoGMM-1D_all_refined_specific.py
+_/00_all_dipeptides/FoldingPreference.py_<br>
+_/01_concentration_series/F3-P1_AutoGMM-1D_all_refined_specific.py_
 
 These files evaluate the folding preference based on the weighted GMM estimates. 
 
