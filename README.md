@@ -6,9 +6,8 @@ Workflow for conformational Analysis
 
 The workflow used involves firstly calculating COM torsions (00_MeasureCOMTorsions) from a gro/xtc trajectory, this requires both files have the processed name with structure ({no.peptides}_{sequence}_noPBC.). This step generates datafiles in h5 format containing either bond or bond/torsion data. Using this data the folding ratio can be calculated for the molecule based on the torsional data (01_EvaluateFoldingRatio). The dynamicity index calculation is compartmentalized into two parts using both the bond and torsion data. The first stage involves generating the FEL (02_ConstructFEL), then evaluating the surface occupancy and subsequently computing the dynamicity (03_EvaluateFEL). Further coide details are provided below. 
 
-#########################
-Directory Structure
-#########################
+```
+################## Directory Structure ##################
 
 ├── scripts
 │   ├── 00_MeasureCOMTorsions
@@ -73,6 +72,8 @@ Directory Structure
 │           ├── 1_FF_noPBC.gro
 │           └── 1_FF_noPBC.xtc
 └── README.md
+...
+```
 
 00_MeasureCOMTorsions/TorsionsBonds/All400/MeasureCOMremote_dipeptidecoassembly_proc18_bond_angle.py
 00_MeasureCOMTorsions/TorsionsBonds/ConcentrationSeries/MeasureCOMremote_dipeptidecoassembly_proc16_bond_angle.py
