@@ -76,9 +76,9 @@ The workflow used involves firstly calculating COM torsions (00_MeasureCOMTorsio
 
 **00_MeasureCOMTorsions**
 
-/TorsionsBonds/All400/MeasureCOMremote_dipeptidecoassembly_proc18_bond_angle.py
-/TorsionsBonds/ConcentrationSeries/MeasureCOMremote_dipeptidecoassembly_proc16_bond_angle.py
-/TorsionsOnly/MeasureCOMremote_dipeptidecoassembly_proc24.py
+_/TorsionsBonds/All400/MeasureCOMremote_dipeptidecoassembly_proc18_bond_angle.py_
+_/TorsionsBonds/ConcentrationSeries/MeasureCOMremote_dipeptidecoassembly_proc16_bond_angle.py_
+_/TorsionsOnly/MeasureCOMremote_dipeptidecoassembly_proc24.py_
 
 These files calculate the center of mass (COM) positions for a peptide from a Gromacs MD trajectory. They assign atoms to the sidechain (SC) or backbone (BB) based on definitions within the local config file. All three versions of the script have subtle differences, mainly in how the front end functions to load trajectories for processing. Please note, the script will find and solve all trajectories in and below the directory at which it is pointed at. Those denoted 'TorsionsBonds' calculate both the torsions SC1-BB1-BB2-SC2 and the distance SC1-SC2 at the same time. Data inputs require a gro/xtc pair containing "noPBC" named with the sequence `{no.peptides}_{sequence}_noPBC`. 
 
@@ -97,13 +97,13 @@ F3-P1_AutoGMM-1D_all_refined_specific.py is an earlier iteration of this code wr
 
 **02_ConstructFEL**
 
-/PlotData.py
-/RunPlotData.py
+_/PlotData.py_
+_/RunPlotData.py_
 
 The free energy landscapes (FELs) described within this work are calculated using this code. It is currently configured to execute on the FF trajectory (test_trajectory/1FF/Run1/) within the repo. It produces 1D/3D plots of the results within a subfolder (graphs). This code was written to be amenable to use on the 400 molecule and concentration series datasets and these selections are controlled by an a runfile also included within the directory.
 
 **03_EvaluateFEL**
 
-/AnalyzeFELDipeptides.py
+_/AnalyzeFELDipeptides.py_
 
 Finally, this script calculates the dynamicity index based on the FEL from the previous step. It is currently configured to execute on the FF trajectory (test_trajectory/1FF/Run1/) though it has been written to apply to both the 400 molecule and concentration series datasets and this is controlled by execution selections by the user within the script. 
